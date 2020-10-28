@@ -59,9 +59,10 @@ $(document).ready(function() {
         img_corrente.removeClass('active');
         span_corrente.removeClass('active');
         $(this).addClass('active');
-        var span_active = $('span.active');
+        var span_active = $(this).index()+1; //).index() mi permette di ottenere la posizione dell'elemento "array" all'interno del mio HTML
         console.log('span attivo '+ span_active);
-        // $('span.active').addClass('active');
+        img_corrente=$('img:nth-child(' + span_active + ')');
+        img_corrente.addClass('active');
     });
 
 });
